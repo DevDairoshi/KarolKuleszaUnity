@@ -23,13 +23,12 @@ public class DuckController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        _body.useGravity = true;
-        _timer = 15.0f;
-
         if (collision.collider.tag == "Arrow" && !_dead)
         {
             DuckSpawner.Score++;
             _dead = true;
+            _body.useGravity = true;
+            _timer = 45.0f;
         }
     }
 

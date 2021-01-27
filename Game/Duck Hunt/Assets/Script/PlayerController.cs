@@ -89,10 +89,11 @@ public class PlayerController : MonoBehaviour
                 SoundManagerScript.Play("step");
             }
         }
+        
 
         var posiotion = transform.position;
-        posiotion.x = Mathf.Clamp(transform.position.x, 300, 700);
-        posiotion.z = Mathf.Clamp(transform.position.z, 300, 700);
+        posiotion.x = Mathf.Clamp(transform.position.x, 100, 900);
+        posiotion.z = Mathf.Clamp(transform.position.z, 100, 900);
         transform.position = posiotion;
     }
 

@@ -33,6 +33,11 @@ public class PlayerController : MonoBehaviour
     {
         UpdateMouseLook();
         UpdateMovement();
+
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
     }
 
     // My functions
@@ -67,13 +72,13 @@ public class PlayerController : MonoBehaviour
         {
             if (_boobingFLag)
             {
-                PlayerCamera.position = new Vector3(PlayerCamera.position.x, PlayerCamera.position.y - 0.03f/5, PlayerCamera.position.z);
-                Hand.transform.position = new Vector3(Hand.transform.position.x - 0.003f/5, Hand.transform.position.y - 0.002f/5, Hand.transform.position.z);
+                PlayerCamera.position = new Vector3(PlayerCamera.position.x, PlayerCamera.position.y - 0.03f/2, PlayerCamera.position.z);
+                Hand.transform.position = new Vector3(Hand.transform.position.x - 0.003f/2, Hand.transform.position.y - 0.002f/2, Hand.transform.position.z);
             }
             else
             {
-                PlayerCamera.position = new Vector3(PlayerCamera.position.x, PlayerCamera.position.y + 0.03f/5, PlayerCamera.position.z);
-                Hand.transform.position = new Vector3(Hand.transform.position.x + 0.003f/5, Hand.transform.position.y+0.002f/5, Hand.transform.position.z);
+                PlayerCamera.position = new Vector3(PlayerCamera.position.x, PlayerCamera.position.y + 0.03f/2, PlayerCamera.position.z);
+                Hand.transform.position = new Vector3(Hand.transform.position.x + 0.003f/2, Hand.transform.position.y+0.002f/2, Hand.transform.position.z);
             }
 
             _boobingTimer += Time.deltaTime;
